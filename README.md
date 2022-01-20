@@ -14,7 +14,7 @@ will be held for in seconds.
 
 ## State Descriptions
 ### State Diagram
-![IMG-0014](https://user-images.githubusercontent.com/93303200/150379761-3806a378-79ef-4db8-9990-33b323bf63b4.JPG)
+![IMG-0014 (1)](https://user-images.githubusercontent.com/93303200/150380149-4732c1b9-5ca4-42b2-a5cf-97f4f9912d6b.jpg)
 
 ### Default States
 There are 6 default states [1,2,3,4,5,6] which control the simple Red-Amber-Green functionality of a basic traffic controller.
