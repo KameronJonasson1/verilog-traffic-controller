@@ -18,7 +18,7 @@ will be held for in seconds.
 
 ### Default States
 There are 6 default states [1,2,3,4,5,6] which control the simple Red-Amber-Green functionality of a basic traffic controller.
-Without any human or sensor input, the controller will remain in these 6 states indefinetly. There are four 
+Without any human or sensor input, the controller will remain in these 6 states indefinitely. There are four 
 traffic lights that are controlled in these states. The functional operation is defined by two sets of identical
 operation directed at different lights. In these states, all walk lights hold the don't walk light on. This operation 
 is defined by the following:
@@ -37,8 +37,8 @@ This state is held for 20 seconds.
 
 ### Walk Light States
 The meaningful walk light operation is controlled by 6 states [1w,1fd,1d,4w,4fd,4d] (w = walk, fd = flashing don't, d = don't)
-In these six states the walk lights will move through three distinct visuals. These visuals describe the allowed padestrian 
-behaviour in the following manner:
+In these six states the walk lights will move through three distinct visuals. These visuals describe the allowed pedestrian 
+behavior in the following manner:
 
   - 1w: Eastbound and Westbound walk lights read "Walk", traffic lights have state 1 operation - 10 Seconds
   - 1fd: Eastbound and Westbound walk lights flash "Don't Walk", traffic lights have state 1 operation - 20 Seconds
@@ -49,19 +49,19 @@ behaviour in the following manner:
 
 ## Inputs
 ### Left Turn Input
-The traffic controller enters the left trun state if the one bit leftturn_request signal is active when leaving state 3. 
-In a real-world implementaion, I would use an inductive sensor to control the leftturn_request signal. In this implementation, 
+The traffic controller enters the left turn state if the one bit leftturn_request signal is active when leaving state 3. 
+In a real-world implementation, I would use an inductive sensor to control the leftturn_request signal. In this implementation, 
 I connected the leftturn_request signal to a key on the Cyclone IV E FPGA development board.
 
 ### Walk Request Input
 Unlike the left turn input, a human request for a walk light comes from a single button press instead of a continuously held 
-sensor value. To implement this functionality, I used a flip-flop to translate the single button press to a continuos 
+sensor value. To implement this functionality, I used a flip-flop to translate the single button press to a continuous 
 signal that will trigger a walk light if active at the end of state 6, or state 3. In a real-world implementation, I would use 
-a mechanical button in a hardended aluminum casing to allow humans to send input to the controller. In this implementation, I used 
+a mechanical button in a hardened aluminum casing to allow humans to send input to the controller. In this implementation, I used 
 a key on the Cyclone IV E FPGA development board.
 
 ## Outputs
-All the meaningful outputs of the traffic light controller are sent to the 7-segment hexidecimal displays on the Cyclone IV E FPGA 
+All the meaningful outputs of the traffic light controller are sent to the 7-segment hexadecimal displays on the Cyclone IV E FPGA 
 development board. The description of these outputs are placed below.
 ![IMG_0010 2](https://user-images.githubusercontent.com/93303200/147776932-29d03b25-7fa7-467c-9dff-d21ff3d15d3d.jpg)
 
